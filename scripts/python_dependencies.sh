@@ -24,5 +24,6 @@ source "/home/ubuntu/$PROJECT_MAIN_DIR_NAME/venv/bin/activate"
 echo "Installing Python dependencies..."
 pip install -r "/home/ubuntu/$PROJECT_MAIN_DIR_NAME/requirements.txt"
 pip install django-crispy-forms
+python3 -m pip install Pillow
 
 echo "Dependencies installed successfully."
