@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '_53v6ylo8$+&ub*0%(1at3)@&ofd(sloi-i!y1sc%gj(ht0oaj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -185,5 +185,3 @@ MESSAGE_TAGS={
 
 
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
