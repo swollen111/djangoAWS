@@ -23,6 +23,9 @@ source "/home/ubuntu/$PROJECT_MAIN_DIR_NAME/venv/bin/activate"
 echo "Running collectstatic command..."
 python manage.py collectstatic --noinput
 
+sudo chown -R ubuntu:ubuntu /home/ubuntu/djangoAWS/staticfiles
+sudo chmod -R u+rw /home/ubuntu/djangoAWS/staticfiles
+
 # Restart Gunicorn services
 echo "Restarting Gunicorn and Nginx services..."
 sudo service gunicorn restart
