@@ -53,3 +53,40 @@
     </section>
 
 {% endblock %}
+
+{# Este archivo es una plantilla HTML para mostrar las publicaciones del blog junto con sus detalles. #}
+
+{# 1. `{% extends "ProyectoWebApp/base.html" %}`:
+     - Hereda la estructura base definida en `base.html` del directorio `ProyectoWebApp`.
+     - Permite reutilizar el diseño y estilos comunes en todas las páginas del proyecto. #}
+
+{# 2. `{% load static %}`:
+     - Habilita el uso de archivos estáticos, como imágenes y hojas de estilo, en la plantilla. #}
+
+{# 3. `{% block content %}` y `{% endblock %}`:
+     - Delimita el contenido principal de la página que se integrará en el bloque `content` de la plantilla base. #}
+
+{# 4. `{% for post in posts %}`:
+     - Inicia un bucle para iterar sobre todas las publicaciones (`posts`) pasadas desde la vista.
+     - Para cada publicación, se muestra una sección con los detalles del post. #}
+
+{# 5. `<img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{ post.imagen.url }}" alt="">`:
+     - Muestra la imagen asociada al post utilizando `post.imagen.url` para acceder a la URL de la imagen cargada.
+     - La clase `img-fluid` hace que la imagen sea responsiva y se ajuste al tamaño de la pantalla. #}
+
+{# 6. Título y contenido del post:
+     - Muestra el título (`post.titulo`) y el contenido breve (`post.contenido`) del post dentro de las etiquetas `<span>`, que están estilizadas con clases de Bootstrap. #}
+
+{# 7. `Autor: {{ post.autor }}`:
+     - Muestra el nombre del autor del post, que es una relación con el modelo `User`. Este valor se obtiene con `post.autor`. #}
+
+{# 8. `{% for categoria in post.categorias.all %}`:
+     - Dentro del bucle de publicaciones, se inicia un bucle para iterar sobre las categorías asociadas a cada post.
+     - `post.categorias.all` devuelve todas las categorías asociadas al post, y se muestra el nombre de cada categoría (`categoria.nombre`). #}
+
+{# 9. Estilo y diseño:
+     - Se usan clases de Bootstrap (`container`, `intro`, `bg-faded`, etc.) para crear una presentación atractiva y ordenada.
+     - El contenido se organiza de manera centrada, y las categorías se muestran en una sección al final. #}
+
+{# En resumen, esta plantilla genera la interfaz de usuario para mostrar las publicaciones del blog, 
+     cada una con su imagen, título, contenido, autor y categorías asociadas. #}
