@@ -185,3 +185,5 @@ MESSAGE_TAGS={
 
 
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
+STATIC_ROOT = '/home/ubuntu/staticfiles'
+
