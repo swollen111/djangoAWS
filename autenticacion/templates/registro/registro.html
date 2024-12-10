@@ -23,3 +23,37 @@
 </form>
 
 {% endblock %}
+
+{# Este archivo es una plantilla HTML para la página de registro de usuarios en la aplicación Django. #}
+
+{# 1. `{% extends "ProyectoWebApp/base.html" %}`:
+     - Hereda la estructura base definida en `base.html` del directorio `ProyectoWebApp`.
+     - Permite reutilizar el diseño y estilos comunes en todas las páginas del proyecto. #}
+
+{# 2. `{% load static %}`:
+     - Habilita el uso de etiquetas relacionadas con archivos estáticos (como CSS o imágenes) en la plantilla. #}
+
+{# 3. `{% load crispy_forms_tags %}`:
+     - Carga las etiquetas de plantilla del paquete `crispy-forms`, que permite renderizar formularios con un diseño mejorado. #}
+
+{# 4. `{% block content %}` y `{% endblock %}`:
+     - Delimita el contenido principal de la página que se integrará en el bloque `content` de la plantilla base. #}
+
+{# 5. `<form>`:
+     - Define un formulario HTML para registrar usuarios.
+     - Atributos:
+       * `method="post"`: Especifica que los datos se enviarán usando el método POST.
+       * `action=""`: Envía los datos a la misma URL actual.
+       * `style="color: white;"`: Establece el color del texto en blanco. #}
+
+{# 6. `{% csrf_token %}`:
+     - Genera un token de seguridad CSRF para prevenir ataques de tipo Cross-Site Request Forgery. #}
+
+{# 7. `{{ form|crispy }}`:
+     - Renderiza el formulario `form` proporcionado por la vista usando los estilos de `crispy-forms`. #}
+
+{# 8. `<button type="submit" class="btn btn-success">Regístrate</button>`:
+     - Botón para enviar el formulario con la clase de estilo `btn btn-success` de Bootstrap. #}
+
+{# En resumen, esta plantilla genera la interfaz de usuario para el registro de nuevos usuarios,
+     integrando un formulario estilizado con la estructura general del sitio web. #}
