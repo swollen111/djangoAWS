@@ -53,3 +53,45 @@
     </section>
 
 {% endblock %}
+
+{# Este archivo es una plantilla HTML para mostrar las publicaciones del blog junto con sus detalles y categorías. #}
+
+{# 1. `{% extends "ProyectoWebApp/base.html" %}`:
+     - Hereda la estructura base definida en `base.html` del directorio `ProyectoWebApp`.
+     - Permite reutilizar el diseño y estilos comunes en todas las páginas del proyecto. #}
+
+{# 2. `{% load static %}`:
+     - Habilita el uso de archivos estáticos, como imágenes y hojas de estilo, en la plantilla. #}
+
+{# 3. `{% block content %}` y `{% endblock %}`:
+     - Delimita el contenido principal de la página que se integrará en el bloque `content` de la plantilla base. #}
+
+{# 4. `{% for post in posts %}`:
+     - Inicia un bucle que recorre todas las publicaciones (`posts`) pasadas desde la vista.
+     - Para cada publicación, se muestra una sección con los siguientes detalles: #}
+
+{# 5. `<img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{ post.imagen.url }}" alt="">`:
+     - Muestra la imagen asociada al post utilizando `post.imagen.url` para acceder a la URL de la imagen cargada.
+     - Se utiliza la clase `img-fluid` para hacer la imagen responsiva y ajustarla al tamaño de la pantalla. #}
+
+{# 6. Título y contenido del post:
+     - El título del post se muestra con `post.titulo` dentro de una etiqueta `<span class="section-heading-lower">`.
+     - El contenido del post se muestra con `post.contenido` dentro de una etiqueta `<span class="section-heading-upper">`. #}
+
+{# 7. `Autor: {{ post.autor }}`:
+     - Muestra el nombre del autor del post, que es una relación con el modelo `User`. Este valor se obtiene con `post.autor`. #}
+
+{# 8. `{% for categoria in post.categorias.all %}`:
+     - Dentro del bucle de publicaciones, se inicia un bucle para iterar sobre las categorías asociadas a cada post.
+     - `post.categorias.all` devuelve todas las categorías asociadas al post, y se muestra el nombre de cada categoría. #}
+
+{# 9. `<a href="{% url 'categoria' categoria.id %}" class="linksCategorias">{{categoria.nombre}}</a>`:
+     - Cada categoría es presentada como un enlace, que redirige a una vista de categorías utilizando su ID.
+     - El nombre de la categoría se muestra dentro de una etiqueta `<a>`, con un estilo de clase `linksCategorias`. #}
+
+{# 10. Estilo y diseño:
+     - Se utilizan clases de Bootstrap y estilos personalizados para organizar las publicaciones y categorías.
+     - Las publicaciones están centradas en la página, y las categorías están separadas por espacios en la parte inferior de la página. #}
+
+{# En resumen, esta plantilla genera la interfaz de usuario para mostrar las publicaciones del blog con su imagen, título, contenido, autor y categorías asociadas, 
+     y permite la navegación entre categorías. #}
