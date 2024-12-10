@@ -27,5 +27,6 @@ pip install -r "/home/ubuntu/$PROJECT_MAIN_DIR_NAME/requirements.txt"
 pip install django-crispy-forms
 pip install whitenoise
 python3 -m pip install Pillow
+sudo apt install sqlite3
 
 echo "Dependencies installed successfully."
