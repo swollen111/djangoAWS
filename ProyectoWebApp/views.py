@@ -14,7 +14,8 @@ def home(request):
     
 
 
-
+def health_check(request):
+    return HttpResponse("OK", status=200)
 
 
 
