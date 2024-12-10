@@ -53,6 +53,29 @@ def logear(request):
     form=AuthenticationForm()
     return render(request,"login/login.html",{"form":form})
 
+# Este código define vistas para gestionar el registro, inicio y cierre de sesión de usuarios en una aplicación Django.
+
+# 1. La clase `VRegistro` implementa la vista de registro de usuarios:
+#    - Método `get`: Muestra un formulario de registro vacío (basado en `UserCreationForm`).
+#    - Método `post`: Procesa los datos enviados por el usuario. Si el formulario es válido:
+#        * Guarda el nuevo usuario en la base de datos.
+#        * Inicia la sesión automáticamente con `login()`.
+#        * Redirige a la página principal ('Home').
+#      Si el formulario contiene errores, los muestra al usuario y recarga el formulario.
+
+# 2. La función `cerrar_sesion` cierra la sesión activa del usuario utilizando `logout()` y lo redirige a la página principal ('Home').
+
+# 3. La función `logear` gestiona el inicio de sesión:
+#    - Si se envía un formulario por POST:
+#        * Valida los datos con `AuthenticationForm`.
+#        * Autentica al usuario con `authenticate()` y, si es válido:
+#            - Inicia la sesión con `login()`.
+#            - Redirige a la página principal ('Home').
+#        * Si los datos son incorrectos, muestra un mensaje de error.
+#    - Si no es una petición POST, muestra un formulario vacío para iniciar sesión.
+
+# En resumen, este archivo implementa las funcionalidades básicas de autenticación de usuarios en Django
+# utilizando formularios proporcionados por `django.contrib.auth.forms`.
 
 
 
