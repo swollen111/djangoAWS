@@ -21,8 +21,6 @@ source "/home/ubuntu/$PROJECT_MAIN_DIR_NAME/venv/bin/activate"
 
 # Run collectstatic command
 echo "Running collectstatic command..."
-python3 manage.py migrate
-python3 manage.py makemigrations
 python manage.py collectstatic --noinput
 
 # Restart Gunicorn services
