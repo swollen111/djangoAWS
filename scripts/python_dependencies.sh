@@ -19,6 +19,7 @@ virtualenv "/home/ubuntu/$PROJECT_MAIN_DIR_NAME/venv"
 # Activate virtual environment
 echo "Activating virtual environment..."
 source "/home/ubuntu/$PROJECT_MAIN_DIR_NAME/venv/bin/activate"
+sudo chmod -R 755 /home/ubuntu/djangoAWS/
 
 # Install dependencies
 echo "Installing Python dependencies..."
