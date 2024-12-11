@@ -205,6 +205,12 @@ LOGGING = {
         'handlers': ['console'],
         'level': 'DEBUG',
 
+
+    },
+}
+
+WHITENOISE_MANIFEST_STRICT = False
+
 # Este archivo de configuración (`settings.py`) define la configuración principal para el proyecto Django llamado "ProyectoWeb". 
 
 # 1. **Importación y Definición de Rutas:**
@@ -258,7 +264,3 @@ LOGGING = {
 
 # En resumen, este archivo de configuración establece las bases para el proyecto Django, incluyendo seguridad, bases de datos, correo electrónico, internacionalización, y el manejo de archivos estáticos y multimedia.
 
-    },
-}
-
-WHITENOISE_MANIFEST_STRICT = False
