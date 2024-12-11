@@ -171,8 +171,8 @@ EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST="smtp.gmail.com"
 EMAIL_USE_TLS=True
 EMAIL_PORT=587
-EMAIL_HOST_USER="adrianvelazquezaragon@classroom.iespicasso.com"
-EMAIL_HOST_PASSWORD="abckzymcjtsyoewx"
+EMAIL_HOST_USER="adrian.velazquezaragon@classroom.iespicasso.com"
+EMAIL_HOST_PASSWORD="25/06/2003"
 
 CRISPY_TEMPLATE_PACK='bootstrap4'
 
