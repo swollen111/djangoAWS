@@ -204,6 +204,60 @@ LOGGING = {
     'root': {
         'handlers': ['console'],
         'level': 'DEBUG',
+
+# Este archivo de configuración (`settings.py`) define la configuración principal para el proyecto Django llamado "ProyectoWeb". 
+
+# 1. **Importación y Definición de Rutas:**
+#    - Se importan módulos como `os` y `pathlib.Path` para manejar rutas de archivos.
+#    - `BASE_DIR` se define como el directorio raíz del proyecto, el cual es utilizado para formar rutas absolutas en el sistema de archivos.
+
+# 2. **Configuración de Seguridad:**
+#    - `SECRET_KEY`: Es una clave secreta utilizada por Django para varias operaciones internas de seguridad. No debe ser compartida en producción.
+#    - `DEBUG`: Está habilitado para el desarrollo, lo que permite que se muestren detalles de los errores. En producción, esto debería ser desactivado.
+#    - `ALLOWED_HOSTS`: Permite que cualquier host acceda al proyecto en desarrollo (esto debería ser más específico en producción).
+
+# 3. **Aplicaciones Instaladas (`INSTALLED_APPS`):**
+#    - Aquí se definen las aplicaciones de Django y las aplicaciones personalizadas del proyecto (como `ProyectoWebApp`, `blog`, `tienda`, etc.) que están habilitadas para ser utilizadas en el proyecto.
+#    - También incluye aplicaciones como `crispy_forms` para mejorar los formularios y `whitenoise` para manejar archivos estáticos.
+
+# 4. **Middleware:**
+#    - Contiene una lista de middlewares utilizados por Django para procesar las solicitudes y respuestas. Incluye seguridad, manejo de sesiones, autenticación, y protección CSRF.
+
+# 5. **Configuración de las URL y Plantillas:**
+#    - `ROOT_URLCONF` define el archivo que contiene las rutas principales del proyecto.
+#    - En `TEMPLATES`, se configura el motor de plantillas de Django para cargar plantillas desde las aplicaciones del proyecto, además de procesadores de contexto como `carro.context_processor.importe_total_carro` que proporciona datos adicionales a las plantillas.
+
+# 6. **Base de Datos (`DATABASES`):**
+#    - En este caso, se está utilizando una base de datos SQLite para el desarrollo (`db.sqlite3` en el directorio base del proyecto), aunque en los comentarios se menciona una posible configuración para MySQL y PostgreSQL.
+
+# 7. **Validación de Contraseñas:**
+#    - Se configuran los validadores de contraseñas para asegurar que las contraseñas de los usuarios cumplan con ciertos criterios de seguridad (como longitud mínima y evitar contraseñas comunes).
+
+# 8. **Internacionalización y Localización:**
+#    - `LANGUAGE_CODE`: Establece el idioma por defecto del proyecto a **euskera** (`es-eu`).
+#    - `TIME_ZONE`: Define la zona horaria como UTC.
+#    - `USE_I18N`, `USE_L10N`, y `USE_TZ`: Permiten la internacionalización, localización y el uso de zonas horarias.
+
+# 9. **Archivos Estáticos y Multimedia:**
+#    - `STATIC_URL` y `MEDIA_URL`: Definen las URLs para acceder a archivos estáticos (CSS, JS, imágenes) y archivos multimedia (como imágenes subidas por los usuarios).
+#    - `MEDIA_ROOT`: Define la ubicación en el sistema de archivos para almacenar los archivos multimedia.
+#    - `STATIC_ROOT`: Se usa en producción para recolectar archivos estáticos.
+#    - Se configura `whitenoise` para manejar y comprimir archivos estáticos.
+
+# 10. **Configuración de Correo Electrónico:**
+#     - Se utiliza el backend SMTP de Gmail para enviar correos electrónicos.
+#     - `EMAIL_HOST`, `EMAIL_PORT`, y `EMAIL_USE_TLS` definen los parámetros de conexión a Gmail.
+#     - `EMAIL_HOST_USER` y `EMAIL_HOST_PASSWORD` contienen las credenciales de la cuenta de correo utilizada para enviar correos.
+
+# 11. **Configuración de los Mensajes:**
+#     - Se configura cómo se muestran los diferentes niveles de mensajes (como mensajes de éxito, advertencia o error) usando los valores de `django.contrib.messages`.
+
+# 12. **Otras Configuraciones:**
+#     - `DEFAULT_AUTO_FIELD`: Se configura para usar el tipo `AutoField` por defecto para los modelos.
+#     - `LOGGING`: Se configura el sistema de logging para mostrar mensajes de depuración en la consola. Esto es útil durante el desarrollo.
+
+# En resumen, este archivo de configuración establece las bases para el proyecto Django, incluyendo seguridad, bases de datos, correo electrónico, internacionalización, y el manejo de archivos estáticos y multimedia.
+
     },
 }
 
