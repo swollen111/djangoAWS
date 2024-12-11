@@ -59,9 +59,9 @@ def enviar_mail(**kwargs):
         })
 
     mensaje_texto=strip_tags(mensaje)
-    from_email="av72003@gmail.com"
+    from_email="adrian.velazquezaragon@classroom.iespicasso.com"
     #to=kwargs.get("email_usuario")
-    to="aquí la dirección del destinatario"
+    to="adrianvelazquezaragon@gmail.com"
     send_mail(asunto,mensaje_texto,from_email,[to], html_message=mensaje)
 
 # Este archivo contiene las vistas que gestionan los pedidos y el procesamiento de estos en la tienda online. 
